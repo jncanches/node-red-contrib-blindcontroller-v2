@@ -1,5 +1,5 @@
 /**
- * Copyright 2015, 2016 Alisdair Smyth
+ * Copyright 2020, Jean-Noël Canches
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
