@@ -995,8 +995,6 @@ module.exports = function(RED) {
 	if (!blinds) {
 		blinds = {};
 		globalContext.set("blinds", blinds);
-		node.error("initialize blinds in global context");
-		node.error(node.context().global.get("blinds"));
 	}
 	return blinds;
   }
@@ -1004,8 +1002,6 @@ module.exports = function(RED) {
   function setBlinds(node, blinds) {
 	  var globalContext = node.context().global;
 	  globalContext.set("blinds", blinds);
-	  node.error("blinds in global context");
-	  node.error(node.context().global.get("blinds"));
   }
 
   /*
