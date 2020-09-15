@@ -22,7 +22,10 @@
     "cover",
     "roller"
   ],
-  "author": "jncanches",
+  "author": {
+    "name": "jncanches",
+    "email": "jncanches@gmail.com"
+  },
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/jncanches/node-red-contrib-blindcontroller-v2/issues"
