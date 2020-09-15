@@ -1,8 +1,22 @@
-# node-red-contrib-blindcontroller
-
-[![npm version](https://badge.fury.io/js/node-red-contrib-blindcontroller.svg)](https://badge.fury.io/js/node-red-contrib-blindcontroller)
+# node-red-contrib-blindcontroller-v2
 
 A collection of <a href="http://nodered.org" target="_new">Node-RED</a> nodes that automate the control of household roller blinds based on the current position of the sun.
+
+# Credits and thanks
+
+This V2 has been created from the excellent <a href="https://github.com/alisdairjsmyth/node-red-contrib-blindcontroller" target="_new">node-red-contrib-blindcontroller</a>.
+All credits go to its author <a href="https://github.com/alisdairjsmyth" target="_new">alisdairjsmyth</a>.
+This project is excellent but missing some little things to be perfect.
+I'm using <a href="https://www.home-assistant.io/" target="_new">Home Assistant</a> and all my automations are in NodeRed.
+
+I'm massively using NodeRed's subflows and the original  blindcontroller can just be used once in your flows (because of the way it stores its list of registered blinds).
+So I updated it to store them in global context of NodeRed.
+ 
+This way, config become shared between blindcontroller nodes and you can easily factorize your nodes in subflows.
+
+I also updated the code to match the latest recommendations introduced in NodeRed V1 (more details <a href="https://nodered.org/docs/creating-nodes/node-js#sending-messages" target="_new">here</a>) 
+
+I planned to introduce blindcontroller inputs to set configuation programmatically (like multi blind controller do).
 
 ## Install
 
