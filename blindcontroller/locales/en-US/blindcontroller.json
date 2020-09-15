@@ -1,0 +1,127 @@
+{
+    "blindcontroller" : {
+        "status" : {
+        },
+        "label" : {
+            "channel"              : "Channel",
+            "dimensions"           : "Dimensions",
+            "top"                  : "Top",
+            "bottom"               : "Bottom",
+            "depth"                : "Depth",
+            "mode"                 : "Mode",
+            "orientation"          : "Orientation",
+            "noffset"              : "- Offset",
+            "poffset"              : "+ Offset",
+            "positions"            : "Positions",
+            "increment"            : "Increment",
+            "maxopen"              : "Max Open",
+            "maxclosed"            : "Max Closed",
+            "nightposition"        : "Night Pos",
+            "opposite"             : "0 is Closed",
+            "altitude"             : "Sun Altitude",
+            "altitudethreshold"    : "Ignore sun position until altitude higher than",
+            "temperature"          : "Temperature",
+            "temperaturethreshold" : "When the temperature is greater than",
+            "temperaturethresholdposition"
+                                   : "set to",
+            "clouds"               : "Cloud Cover",
+            "cloudsthreshold"      : "When the cloud cover is greater than",
+            "cloudsthresholdposition"
+                                   : "set to",
+            "uvindex"              : "UV Index",
+            "uvindexthreshold"     : "When the UV Index is greater than",
+            "uvindexthresholdposition"
+                                   : "set to",
+            "name"                 : "Name",
+            "manual"               : "Manual",
+            "expiryperiod"         : "Manually set positions expiry after (minutes)"
+        },
+        "placeholder" : {
+            "mode"                 : "Summer",
+            "channel"              : "1",
+            "orientation"          : "0",
+            "noffset"              : "90",
+            "poffset"              : "90",
+            "top"                  : "1",
+            "bottom"               : "1",
+            "depth"                : "1",
+            "altitudethreshold"    : "0",
+            "increment"            : "1",
+            "maxopen"              : "0",
+            "maxclosed"            : "100",
+            "temperaturethreshold" : "0",
+            "temperaturethresholdposition" :
+                                     "100",
+            "cloudsthreshold"      : "0",
+            "cloudsthresholdposition" :
+                                     "0",
+            "uvindexthreshold"     : "0",
+            "uvindexthresholdposition"
+                                   : "100",
+            "name"                 : "Name",
+            "nightposition"        : "100",
+            "expiryperiod"         : "120",
+            "opposite"             : "false"
+        },
+        "error" : {
+            "invalid-msg-payload"  : "Invalid msg.payload",
+            "unknown-msg-topic"    : "Unknown msg.topic: ",
+            "sunPosition" : {
+                "missing-property"          : "Missing property: ",
+                "invalid-sunInSky"          : "Property sunInSky must be of type boolean: ",
+                "invalid-altitude"          : "Property altitude must be of type number and less than 90: ",
+                "invalid-azimuth"           : "Property azimuth must be of type number and between 0 and 360: "
+            },
+            "blind" : {
+                "missing-property"          : "Missing property: ",
+                "invalid-orientation"       : "Property orientation must be of type number and between 0 and 360: ",
+                "invalid-mode"              : "Invalid mode: ",
+                "invalid-noffset"           : "Negative offset must be of type number and between 0 and 90: ",
+                "invalid-poffset"           : "Positive offset must be of type number and between 0 and 90: ",
+                "invalid-top"               : "Top must be of type number and greater than 0: ",
+                "invalid-bottom"            : "Bottom must be of type number and greater than or equal to 0: ",
+                "invalid-depth"             : "Depth must be of type number and greater than or equal to 0: ",
+                "invalid-dimensions"        : "Top must be greater than bottom: ",
+                "invalid-increment"         : "Increment must be between 0 and 100, and be a factor of 100: ",
+                "invalid-maxopen"           : "Maximum open position must be between 0 and 100 and a multiple of increment: ",
+                "invalid-maxclosed"         : "Maximum closed position must be between 0 and 100 and a multiple of increment: ",
+                "invalid-max-settings"      : "Maximum open position must be less than maximum closed position: ",
+                "invalid-altitudethreshold" : "Altitude threshold must be of type number and between 0 and 90: ",
+                "invalid-cloudsthreshold"   : "Cloud threshold must be of type number and between 0 and 1: ",
+                "invalid-cloudsthresholdposition"
+                                            : "Cloud threshold position must be between 0 and 100 and a multiple of increment: ",
+                "invalid-uvindexthreshold"  : "UV Index threshold must be of type number and between 0 and 20: ",
+                "invalid-uvindexthresholdposition"
+                                            : "UV Index threshold position must be between 0 and 100 and a multiple of increment: ",
+                "invalid-temperaturethresholdposition"
+                                            : "Temperature threshold position be between 0 and 100 and a multiple of increment: ",
+                "invalid-nightposition"     : "Night position must be between 0 and 100 and a multiple of increment: ",
+                "invalid-expiryperiod"      : "Expiry period must be greater than 0: "
+            },
+            "blindPosition" : {
+                "missing-property"          : "Missing property: ",
+                "invalid-blindPosition"     : "Invalid blind position: ",
+                "invalid-expiryperiod"      : "Expiry period must be greater than 0: ",
+                "invalid-reset"             : "Reset should be of type boolean: "
+            },
+            "weather" : {
+                "invalid-clouds"            : "Invalid clouds: ",
+                "invalid-uvindex"           : "Invalid UV Index: "
+            },
+            "mode" : {
+                "missing-property"          : "Missing property: ",
+                "invalid-mode"              : "Invalid mode: "
+            }
+        },
+        "positionReason" : {
+            "01" : "Manually set",
+            "02" : "Sun below horizon",
+            "03" : "Sun below altitude threshold",
+            "04" : "Sun not in window",
+            "05" : "Sun in window",
+            "06" : "Overcast conditions",
+            "07" : "Temperature forecast above threshold",
+            "08" : "UV Index above threshold"
+        }
+    }
+}

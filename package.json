@@ -1,0 +1,36 @@
+{
+  "author": {
+    "name": "Jean-Noël Canches",
+    "email": "jncanches@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/jncanches/node-red-contrib-blindcontroller-v2/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "A collection of Node-RED nodes that can be used to automate the control of household roller blinds based on the current position of the sun.",
+  "devDependencies": {},
+  "homepage": "https://github.com/jncanches/node-red-contrib-blindcontroller-v2/blob/master/README.md",
+  "keywords": [
+    "node-red",
+    "suncalc",
+    "home+automation",
+    "qmotion",
+    "blinds",
+    "home+assistant",
+    "cover"
+  ],
+  "license": "Apache-2.0",
+  "name": "node-red-contrib-blindcontroller-v2",
+  "node-red": {
+    "nodes": {
+      "blindcontroller": "blindcontroller/blindcontroller.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jncanches/node-red-contrib-blindcontroller-v2.git"
+  },
+  "version": "1.0"
+}
