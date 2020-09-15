@@ -22,9 +22,9 @@ I planned to introduce blindcontroller inputs to set configuation programmatical
 
 Run the following command in the root directory of your Node-RED install
 
-    npm install node-red-contrib-blindcontroller
+    npm install node-red-contrib-blindcontroller-v2
 
-<b>node-red-contrib-blindcontroller</b> is compatible with <b>node-red-contrib-sunpos</b>.
+<b>node-red-contrib-blindcontroller-v2</b> is compatible with <b>node-red-contrib-sunpos</b>.
 
 ## Blind Controller
 
