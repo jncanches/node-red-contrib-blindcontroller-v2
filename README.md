@@ -66,7 +66,11 @@ This node calculates the appropriate blind position to restrict or maximise dire
 * <b>expiry period</b>: (optional) the duration in minutes a manual setting will remain is place. Default to 120.
 
 ### Calculation
-The calculation requires the output of the <a href="https://www.npmjs.com/package/node-red-contrib-sunpos" target="_new">Sun Position</a> Node. This can be supplemented with current weather conditions, such as that from forecastio or weather underground. <b>msg.topic</b> should be set to weather, and <b>msg.payload</b> either or both of the following properties:
+The calculation requires the output of the <a href="https://www.npmjs.com/package/node-red-contrib-sunpos" target="_new">Sun Position</a> Node. 
+
+<b>By default, position will be computed for all registered blinds. If you want to restrict to one particualr blind, just append msg.payload.channel to Sun or Weather payload.</b> 
+
+This can be supplemented with current weather conditions, such as that from forecastio or weather underground. <b>msg.topic</b> should be set to weather, and <b>msg.payload</b> either or both of the following properties:
 
 * <b>maxtemp</b>: the forecasted maximum temperature for the day;
 * <b>clouds</b>: A numerical value between 0 and 1 (inclusive) representing the percentage of sky occluded by clouds. A value of 0 corresponds to clear sky, 0.4 to scattered clouds, 0.75 to broken cloud cover, and 1 to completely overcast skies.

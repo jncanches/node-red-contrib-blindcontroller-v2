@@ -765,11 +765,16 @@ module.exports = function(RED) {
    * position is determined send a message with the new position for the
    * channel.
    */
-  function runCalc(node, send, msg, blinds, sunPosition, weather) {
+  function runCalc(node, send, msg, allBlinds, sunPosition, weather) {
     var i;
+    var blinds = [];
     var resultMsgs = [];
+
+    if (msg.payload.channel && allBlinds[msg.payload.channel]) {
+      blinds.push(allBlinds[msg.payload.channel]);
+    }
+
     for (i in blinds) {
-      // node.error("runCalc for " + i);
       var previousBlindPosition = blinds[i].blindPosition;
       var previousSunInWindow = blinds[i].sunInWindow;
       var previousBlindPositionReasonCode = blinds[i].blindPositionReasonCode;
@@ -778,15 +783,14 @@ module.exports = function(RED) {
 
       blinds[i].logicalBlindPosition = blinds[i].blindPosition;
       blinds[i].blindPosition = blinds[i].opposite
-          ? 100 - blinds[i].blindPosition
-          : blinds[i].blindPosition;
+        ? 100 - blinds[i].blindPosition
+        : blinds[i].blindPosition;
 
       if (
-          blinds[i].blindPosition != previousBlindPosition ||
-          blinds[i].sunInWindow != previousSunInWindow ||
-          blinds[i].blindPositionReasonCode != previousBlindPositionReasonCode
+        blinds[i].blindPosition != previousBlindPosition ||
+        blinds[i].sunInWindow != previousSunInWindow ||
+        blinds[i].blindPositionReasonCode != previousBlindPositionReasonCode
       ) {
-        //node.error("runCalc has changed for " + i);
         var resultMsg = RED.util.cloneMessage(msg);
 
         resultMsg.payload = blinds[i];
@@ -801,8 +805,7 @@ module.exports = function(RED) {
       }
     }
     if (resultMsgs.length > 0) {
-      //node.error("runCalc results length " + resultMsgs.length);
-      node.send([resultMsgs]);
+      send(resultMsgs);
     }
   }
 
