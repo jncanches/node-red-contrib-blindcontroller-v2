@@ -769,7 +769,7 @@ module.exports = function(RED) {
     var i;
     var resultMsgs = [];
     for (i in blinds) {
-      node.error("runCalc for " + i);
+      // node.error("runCalc for " + i);
       var previousBlindPosition = blinds[i].blindPosition;
       var previousSunInWindow = blinds[i].sunInWindow;
       var previousBlindPositionReasonCode = blinds[i].blindPositionReasonCode;
