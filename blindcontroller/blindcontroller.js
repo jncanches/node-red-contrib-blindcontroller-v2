@@ -908,7 +908,6 @@ module.exports = function(RED) {
             break;
           case "blindPositionReset":
             resetPosition(blinds[msg.payload.channel]);
-            runCalc(node, send, msg, blinds, sunPosition, weather);
             break;
           case "blind":
             var channel = msg.payload.channel;
@@ -1124,7 +1123,6 @@ module.exports = function(RED) {
             break;
           case "blindPositionReset":
             resetPosition(blinds[msg.payload.channel]);
-            runCalc(node, send, msg, blinds, sunPosition, weather);
             break;
           case "weather":
             weather = msg.payload;
